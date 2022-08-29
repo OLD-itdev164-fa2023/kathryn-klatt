@@ -8,6 +8,17 @@ import * as styles from "../components/index.module.css"
 
 const links = [
   {
+    text: "About",
+    url: "../about",
+    description: "About the author.",
+  },
+  {
+    text: "Contact",
+    url: "../contact",
+    description:
+      "Contact page.",
+  },
+  {
     text: "Tutorial",
     url: "https://www.gatsbyjs.com/docs/tutorial",
     description:
