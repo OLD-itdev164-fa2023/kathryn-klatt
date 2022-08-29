@@ -6,28 +6,28 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const Contact = ({data}) => {
-    const { name, company, address, address2 }= data.site.siteMetadata.contact;
+   // const { name, company, address, address2 } = data.site.siteMetadata.contact;
     return (
-        <Layout>
-        <Seo title="Home"/>
+      <Layout>
+        <Seo title="Home" />
         <h1>Contact Us</h1>
         <p>Please send all inquiries to:</p>
-        <div>{company}</div>
-        <div>{`C/O ${name}`}</div>
-        <div>{address}</div>
-        <div>{address2}</div>
-        <div style={{maxWidth:`300px`, marginBottom: `1.45rem`}}>
-        <StaticImage
-        src="../images/gatsby-icon.png"
-        width={300}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt="Gatsby Icon"
-        style={{marginBottom: `1.45rem`}}
-        />
+        <div>{data.site.siteMetadata.contact.company}</div>
+        <div>{`C/O ${data.site.siteMetadata.contact.name}`}</div>
+        <div>{data.site.siteMetadata.contact.address}</div>
+        <div>{data.site.siteMetadata.contact.address2}</div>
+        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+          <StaticImage
+            src="../images/gatsby-icon.png"
+            width={300}
+            quality={95}
+            formats={["auto", "webp", "avif"]}
+            alt="Gatsby Icon"
+            style={{ marginBottom: `1.45rem` }}
+          />
         </div>
         <Link to="/">Home</Link>
-        </Layout>
+      </Layout>
     )
 }
 
