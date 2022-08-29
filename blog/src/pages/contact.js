@@ -33,7 +33,7 @@ const Contact = ({data}) => {
 
 export default Contact
 export const query = graphql`
-  {
+ query {
     site {
       siteMetadata {
         contact {

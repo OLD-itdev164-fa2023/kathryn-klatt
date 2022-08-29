@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const About = ({data}) => {
-    const {name, company} = data.site.siteMetadata.contact;
+    const {name, company} = data.site.siteMetadata.about;
     return (
         <Layout>
         <Seo title="Home"/>
@@ -35,8 +35,6 @@ query {
 				contact{
 					Name
                     Company
-  				    Address
-  				    Address2
 				}
 			}
 		}

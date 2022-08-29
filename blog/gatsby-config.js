@@ -8,8 +8,7 @@ module.exports = {
       Company: `Blog Barn`,
       Address: `9713 S 13th St`,
       Address2: `Oak Creek, WI 53134`
-    },
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    }
   },
   plugins: [
     `gatsby-plugin-image`,
