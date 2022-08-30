@@ -7,8 +7,8 @@ module.exports = {
       Name: `Kathryn Klatt`,
       Company: `Blog Barn`,
       Address: `9713 S 13th St`,
-      Address2: `Oak Creek, WI 53134`
-    }
+      Address2: `Oak Creek, WI 53134`,
+    },
   },
   plugins: [
     `gatsby-plugin-image`,

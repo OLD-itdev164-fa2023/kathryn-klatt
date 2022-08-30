@@ -6,19 +6,19 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const Contact = ({data}) => {
-    const { name, company, address, address2 } = data.site.siteMetadata.contact;
+    const { Name, Company, Address, Address2 } = data.site.siteMetadata.contact;
     return (
         <Layout>
         <Seo title="Home"/>
         <h1>Contact Us</h1>
         <p>Please send all inquiries to:</p>
-        <div>{company}</div>
-        <div>{`C/O ${name}`}</div>
-        <div>{address}</div>
-        <div>{address2}</div>
+        <div>{Company}</div>
+        <div>{`C/O ${Name}`}</div>
+        <div>{Address}</div>
+        <div>{Address2}</div>
         <div style={{maxWidth:`300px`, marginBottom: `1.45rem`}}>
         <StaticImage
-        src="../images/gatsby-icon.png"
+        src="../images/barn.jpg"
         width={300}
         quality={95}
         formats={["auto", "webp", "avif"]}
