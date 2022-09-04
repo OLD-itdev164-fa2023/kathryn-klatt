@@ -1,9 +1,10 @@
 const path = require(`path`);
+
 exports.createPages = ({graphql, actions})=>{
   const{createPage} = actions;
   return new Promise((resolve, reject)=> {
-    graphyql(`
-      query MyQuery {
+    graphql(`
+      {
         allContentfulBlogPost {
           edges {
             node {
@@ -15,7 +16,7 @@ exports.createPages = ({graphql, actions})=>{
       }
     `).then(result => {
       if (result.errors) {
-        reject(result.errors)
+        reject(result.errors);
       }
       result.data.allContentfulBlogPost.edges.forEach((edge) => {
           createPage({
@@ -26,7 +27,7 @@ exports.createPages = ({graphql, actions})=>{
             },
           })
         })
-      resolve()
+      resolve();
     })
   });
 };
