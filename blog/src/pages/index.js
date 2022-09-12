@@ -37,6 +37,7 @@ export const query = graphql`
       edges {
         node {
           id
+          title
           slug
           body {
             childMarkdownRemark {
@@ -50,7 +51,6 @@ export const query = graphql`
               placeholder: BLURRED
             )
           }
-          title
         }
       }
     }
