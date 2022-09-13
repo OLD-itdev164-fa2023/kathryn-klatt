@@ -1,19 +1,27 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import * as styles from "../components/index.module.css"
 
 const IndexPage = ({data})=>(
   <Layout>
   <Seo title="Home"/>
-  <ul>
+  <ul className={styles.list}>
   {
     data.allContentfulBlogPost.edges.map(edge =>(
 
-      <li>
-      <Link to={edge.node.slug} key={edge.node.id}>{edge.node.title}
+      <li key={edge.node.id}>
+      <Link to={edge.node.slug}>{edge.node.title}
       </Link>
+      <div>
+      <GatsbyImage image={edge.node.heroImage.gatsbyImageData}/>
+      </div>
+      <div>
+      {edge.node.body.childMarkdownRemark.excerpt}
+      </div>
       </li>
     ))
   }
@@ -29,8 +37,20 @@ export const query = graphql`
       edges {
         node {
           id
-          slug
           title
+          slug
+          body {
+            childMarkdownRemark {
+              excerpt
+            }
+          }
+          heroImage {
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 300
+              placeholder: BLURRED
+            )
+          }
         }
       }
     }
