@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 
 const Outer = styled.header`
-background: rebeccapurple;
+background: ${props => props.theme.header.backgroundColor};
 margin-bottom: 1.45rem;
 margin: 0 auto;
 padding: var(--space-4) var(--size-gutter);
@@ -14,7 +14,7 @@ align-items: center;
 justify-content: space-between;
 `
 
-const H1 = styled.H1`
+const H1 = styled.h1`
 margin: 0px;
 `
 
