@@ -15,7 +15,7 @@ const IndexPage = ({data})=>(
     data.allContentfulBlogPost.edges.map(edge =>(
 
     <ListItem p={3} key={edge.node.id}>
-    <Link to = {edge.node.slug}>{edge.node.id}</Link>
+    <Link to = {edge.node.slug}>{edge.node.title}</Link>
     <div>
     <GatsbyImage image={edge.node.heroImage.gatsbyImageData}/>
     </div>
