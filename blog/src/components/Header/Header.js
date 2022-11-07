@@ -58,7 +58,7 @@ const Header = ({ siteTitle }) => (
           width={11 / 12} flex flexDirection="column" justifyContent="center">
           <Nav>
             <Title>
-            <StyledLink to="/">{siteTitle}</StyledLink>
+              <StyledLink to="/">{siteTitle}</StyledLink>
             </Title>
             <MediaQuery>
               <StyledLink to="/">Home</StyledLink>
