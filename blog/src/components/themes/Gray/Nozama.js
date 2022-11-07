@@ -1,3 +1,0 @@
-
-
-export {theme as Nozama}

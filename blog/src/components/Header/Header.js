@@ -47,7 +47,7 @@ const MediaQuery = styled.div`
 
 const Header = ({ siteTitle }) => (
   <Outer>
-    <Inner>
+
       <Section flex>
         <Section width={1 / 12} flex flexDirection="column" justifyContent="center">
           <ThemeConsumer>
@@ -69,7 +69,7 @@ const Header = ({ siteTitle }) => (
           </Nav>
         </Section>
       </Section>
-    </Inner>
+
   </Outer>
 )
 
