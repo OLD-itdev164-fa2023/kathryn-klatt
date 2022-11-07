@@ -1,12 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import styled from 'styled-components'
+import styled, {ThemeConsumer} from 'styled-components'
 import {H1} from '../Heading'
 import {Section} from '../Section'
 import {Flex} from 'rebass'
 import { SearchButton } from "../Button"
-import { ThemeConsumer } from "styled-components"
+
 
 
 const Outer = styled.header`
@@ -65,7 +65,7 @@ const Header = ({ siteTitle }) => (
               <StyledLink to="/about">About</StyledLink>
               <StyledLink to="/contact">Contact</StyledLink>
             </MediaQuery>
-            <SearchButton icon={<Search />} variant="contrast" />
+            <SearchButton variant="contrast" />
           </Nav>
         </Section>
       </Section>
