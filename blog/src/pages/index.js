@@ -21,7 +21,7 @@ const IndexPage = ({data})=>(
   data.allContentfulBlogPost.edges.map(edge=>(
     <Card key= {edge.node.id} width= {256} p={3}>
     <Link to={edge.node.slug}>
-      <Image src ={edge.node.heroImage.gatsbyImageData} alt="hero image"/>
+      <Image src ={edge.node.heroImage.url} alt="hero image"/>
     </Link>
     <Heading>{edge.node.title}</Heading>
     <div>{edge.node.body.childMarkdownRemark.excerpt}</div>
@@ -31,8 +31,6 @@ const IndexPage = ({data})=>(
 </Grid>
   </Layout>
 )
-
-
 
 export const Head = () => <Seo title="Home"/>
 
@@ -52,6 +50,7 @@ export const query = graphql`
             }
           }
           heroImage {
+            url
             gatsbyImageData(
               layout: CONSTRAINED
               width: 600
