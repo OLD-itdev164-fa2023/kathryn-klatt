@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
-import {Box, Card, Image, Heading} from 'rebass'
+import { GatsbyImage } from "gatsby-plugin-image"
+import {Box, Card, Heading} from 'rebass'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import styled from "styled-components"
@@ -21,7 +22,7 @@ const IndexPage = ({data})=>(
   data.allContentfulBlogPost.edges.map(edge=>(
     <Card key= {edge.node.id} width= {256} p={3}>
     <Link to={edge.node.slug}>
-      <Image src ={edge.node.heroImage.url} alt="hero image"/>
+      <GatsbyImage image ={edge.node.heroImage.gatsbyImageData} alt="hero image"/>
     </Link>
     <Heading>{edge.node.title}</Heading>
     <div>{edge.node.body.childMarkdownRemark.excerpt}</div>
